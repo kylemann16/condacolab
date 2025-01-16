@@ -122,8 +122,8 @@ def install_from_url(
         Change to False to ignore checks and always attempt
         to run the installation.
     restart_kernel
-        Variable to manage the kernel restart during the installation 
-        of condacolab. Set it `False` to stop the kernel from restarting 
+        Variable to manage the kernel restart during the installation
+        of condacolab. Set it `False` to stop the kernel from restarting
         automatically and get a button instead to do it.
     """
     if run_checks:
@@ -169,7 +169,7 @@ def install_from_url(
 
     output = check_output([f"{prefix}/bin/conda", "list", "--json"])
     payload = json.loads(output)
-    installed_names = [pkg["name"] for pkg in payload] 
+    installed_names = [pkg["name"] for pkg in payload]
     required_packages = ["matplotlib-base", "psutil", "google-colab"]
     for pkg in required_packages.copy():
         if pkg in installed_names:
@@ -293,11 +293,11 @@ def install_miniforge(
         Change to False to ignore checks and always attempt
         to run the installation.
     restart_kernel
-        Variable to manage the kernel restart during the installation 
-        of condacolab. Set it `False` to stop the kernel from restarting 
+        Variable to manage the kernel restart during the installation
+        of condacolab. Set it `False` to stop the kernel from restarting
         automatically and get a button instead to do it.
     """
-    installer_url = r"https://github.com/jaimergp/miniforge/releases/latest/download/Miniforge-colab-Linux-x86_64.sh"
+    installer_url = r"https://github.com/conda-forge/miniforge/releases/download/24.11.2-1/Miniforge3-Linux-x86_64.sh"
     install_from_url(installer_url, prefix=prefix, env=env, run_checks=run_checks, restart_kernel=restart_kernel)
 
 
@@ -326,8 +326,8 @@ def install_miniconda(
         Change to False to ignore checks and always attempt
         to run the installation.
     restart_kernel
-        Variable to manage the kernel restart during the installation 
-        of condacolab. Set it `False` to stop the kernel from restarting 
+        Variable to manage the kernel restart during the installation
+        of condacolab. Set it `False` to stop the kernel from restarting
         automatically and get a button instead to do it.
     """
     installer_url = r"https://repo.anaconda.com/miniconda/Miniconda3-py37_4.12.0-Linux-x86_64.sh"
@@ -360,8 +360,8 @@ def install_anaconda(
         Change to False to ignore checks and always attempt
         to run the installation.
     restart_kernel
-        Variable to manage the kernel restart during the installation 
-        of condacolab. Set it `False` to stop the kernel from restarting 
+        Variable to manage the kernel restart during the installation
+        of condacolab. Set it `False` to stop the kernel from restarting
         automatically and get a button instead to do it.
     """
     installer_url = r"https://repo.anaconda.com/archive/Anaconda3-2022.05-Linux-x86_64.sh"
