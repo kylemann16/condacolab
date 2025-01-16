@@ -233,8 +233,8 @@ def install_miniforge(
         Change to False to ignore checks and always attempt
         to run the installation.
     """
-    installer_url = "https://github.com/conda-forge/miniforge/releases/download/24.11.2-1/Miniforge3-24.11.2-1-Linux-x86_64.sh"
-    checksum = "c79c7326a846d6df9ec824e19ccc99454d8f5009e37888df301b23eef11280ca"
+    installer_url = "https://github.com/conda-forge/miniforge/releases/download/22.9.0-3/Mambaforge-22.9.0-3-Linux-x86_64.sh"
+    checksum = "29f6374464307732c2c9d6711cdbca4d685c632f31e8bf1a5565276c65e0069b"
     install_from_url(installer_url, prefix=prefix, env=env, run_checks=run_checks, sha256=checksum)
 
 
